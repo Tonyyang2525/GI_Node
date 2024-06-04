@@ -1,0 +1,62 @@
+[
+  {
+    "employeeID": 1,
+    "name": "Tony",
+    "salary": 525,
+    "department": "Apprenticeship"
+  },
+  {
+    "employeeID": 2,
+    "name": "Joe",
+    "salary": 1000,
+    "department": "Junior developer"
+  },
+  {
+    "employeeID": 3,
+    "name": "Chris",
+    "salary": 890,
+    "department": "Data Analyst"
+  },
+  {
+    "employeeID": 4,
+    "name": "Rodney",
+    "salary": 625,
+    "department": "IT"
+  },
+  {
+    "employeeID": 5,
+    "name": "Tony",
+    "salary": 525,
+    "department": "Apprenticeship"
+  },
+  {
+    "employeeID": 6,
+    "name": "Tony",
+    "salary": 525,
+    "department": "Apprenticeship"
+  },
+  {
+    "employeeID": 7,
+    "name": "Tony",
+    "salary": 525,
+    "department": "Apprenticeship"
+  },
+  {
+    "employeeID": 8,
+    "name": "Tony",
+    "salary": 525,
+    "department": "Apprenticeship"
+  },
+  {
+    "employeeID": 9,
+    "name": "Tony",
+    "salary": 525,
+    "department": "Apprenticeship"
+  },
+  {
+    "employeeID": 10,
+    "name": "Tony",
+    "salary": 525,
+    "department": "Apprenticeship"
+  }
+]
