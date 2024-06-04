@@ -1,36 +1,28 @@
 const express = require("express");
-const fs = require("fs");
+
+const employees = require("./employees.json");
 
 const app = express();
 const PORT = 3000;
 
-// app.use(express.json());
-
-const readEmployees = () => {
-  const data = fs.readFileSync("employees.json", "utf8");
-  return JSON.parse(data);
-};
+// const readEmployees = () => {
+//   const data = fs.readFileSync("employees.json", "utf8");
+//   return JSON.parse(data);
+// };
 
 app.get("/employees", (req, res) => {
-  const employ = readEmployees();
-  res.send(employ);
+  res.json(employees);
 });
 
 app.get("/employees/:employeeID", (req, res) => {
-  const employ = readEmployees();
-  const employId = parseInt(req.params.employeeID, 10);
+  const employeeID = parseInt(req.params.employeeID, 10);
 
-  let findSpecificEmployee = employ.find((e) => e.employId === employId);
+  const employee = employees.find((emp) => emp.employeeID === employeeID);
 
-  if (findSpecificEmployee) {
-    res.json(findSpecificEmployee);
-  } else {
-    res.status(404).json({ error: `employee not found` });
+  if (!employee) {
+    return res.status(404).json({ error: `employee not found` });
   }
-
-  // findSpecificEmployee
-  //   ? res.json(findSpecificEmployee)
-  //   : res.status(404).json({ error: `employee not found` });
+  res.json(employee);
 });
 
 app.listen(PORT, () => {
